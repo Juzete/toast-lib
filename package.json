@@ -48,6 +48,7 @@
   "dependencies": {
     "-": "0.0.1",
     "caniuse-lite": "^1.0.30001320",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "uid": "^2.0.0"
   }
 }

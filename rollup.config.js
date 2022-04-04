@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import alias from 'rollup-plugin-alias'
+import alias from 'rollup-plugin-alias';
 export default [
   {
     input: './src/index.js',
@@ -16,7 +16,7 @@ export default [
         file: 'dist/index.es.js',
         format: 'es',
         exports: 'named',
-      }
+      },
     ],
     plugins: [
       postcss({
@@ -25,12 +25,13 @@ export default [
       }),
       babel({
         exclude: 'node_modules/**',
-        presets: ['@babel/preset-react']
+        presets: ['@babel/preset-react'],
       }),
       alias({
         entries: [
           { find: '@', replacement: './src' },
-        ]
+          { find: '@assets', replacement: './src/assets' },
+        ],
       }),
       external(),
       resolve(),
@@ -38,5 +39,5 @@ export default [
     ],
     external: ['styled-components'],
     globals: { 'styled-components': 'styled' },
-  }
+  },
 ];
