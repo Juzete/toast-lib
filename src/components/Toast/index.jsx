@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { ToastContext } from '@/contexts/ToastContext';
 
-import { ToastContainer, Icon, Text, Title, Cancel } from './style';
+import { ToastContainer, Icon, Text, Title, Cancel } from './components';
 
 const Toast = ({ properties }) => {
   const { removeToast, position } = useContext(ToastContext);

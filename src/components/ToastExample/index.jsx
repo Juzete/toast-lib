@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { ToastContext } from '@/contexts/ToastContext';
 
-import { Button, Wrapper } from './style';
+import { Button, Wrapper } from './components';
 import {
   defaultErrorToastProperties,
   defaultInfoToastProperties,

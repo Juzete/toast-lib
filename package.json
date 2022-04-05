@@ -5,11 +5,14 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint --ext .js,.jsx src --fix",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "cypress:run": "cypress run",
+    "test:cypress": "start-server-and-test storybook http://localhost:6006 cypress:run ",
+    "test:cypress:open": "start-server-and-test storybook http://localhost:6006 cypress ",
+    "cypress": "cypress open"
   },
   "prettier": {
     "singleQuote": true
@@ -48,6 +51,8 @@
   "dependencies": {
     "-": "0.0.1",
     "caniuse-lite": "^1.0.30001320",
+    "cypress": "^9.5.3",
+    "start-server-and-test": "^1.14.0",
     "styled-components": "^5.3.3",
     "uid": "^2.0.0"
   }
