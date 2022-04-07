@@ -6,15 +6,8 @@ import {
 } from '../presets/toastsDefaultProperties';
 
 export const getToastPropertiesByType = (type) => {
-  console.log(type);
   switch (type) {
     case 'info':
-      console.log([
-        defaultInfoToastProperties.icon,
-        defaultInfoToastProperties.background,
-        defaultInfoToastProperties.color,
-        defaultInfoToastProperties.title,
-      ]);
       return [
         defaultInfoToastProperties.icon,
         defaultInfoToastProperties.background,

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-
 import { ToastContext } from '@/contexts/ToastContext';
 
 import { Button, Wrapper } from './components';
@@ -12,12 +11,12 @@ import {
 
 const ToastExample = ({ config }) => {
   const { addToast } = useContext(ToastContext);
-
   return (
     <Wrapper>
       <Button
         style={{ background: defaultSuccessToastProperties.background }}
         onClick={() => addToast('success', 'success toast example', config)}
+        data-test-id="successButton"
       >
         success toast example
       </Button>
