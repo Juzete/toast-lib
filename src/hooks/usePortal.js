@@ -29,7 +29,6 @@ const usePortal = (position) => {
 
   useEffect(() => {
     setPortal(() => createPortalContainer(position));
-    console.log(portal);
     return removePortalContainer;
   }, [position]);
 };

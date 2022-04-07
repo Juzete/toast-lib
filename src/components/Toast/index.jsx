@@ -10,7 +10,6 @@ const Toast = ({ properties }) => {
   const [offsetX, setOffsetX] = useState(0);
 
   const { title, icon, text, id, fontSize, iconSize } = properties;
-  console.log({ properties });
 
   useEffect(() => {
     const timerId = properties.timer(remove);
@@ -18,7 +17,6 @@ const Toast = ({ properties }) => {
   }, []);
 
   const remove = () => {
-    console.log('rem', id);
     properties.remove(() => removeToast(id));
   };
 
@@ -43,8 +41,12 @@ const Toast = ({ properties }) => {
     >
       <Title>{title}</Title>
       <Icon icon={icon} iconSize={iconSize}></Icon>
-      <Text fontSize={fontSize}>{text}</Text>
-      <Cancel onClick={remove}>X</Cancel>
+      <Text fontSize={fontSize} data-test-id={`toastText${properties.title}`}>
+        {text}
+      </Text>
+      <Cancel onClick={remove} data-test-id={`toastClose${properties.title}`}>
+        X
+      </Cancel>
     </ToastContainer>
   );
 };

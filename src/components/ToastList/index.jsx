@@ -28,8 +28,6 @@ const ToastList = ({ toastList }) => {
 
   useEffect(() => {
     editToastList();
-    console.log({ toasts });
-    console.log({ toastList });
   }, [toastList]);
 
   return (

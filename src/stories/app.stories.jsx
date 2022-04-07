@@ -6,7 +6,7 @@ import { ToastProvider } from '@/contexts/ToastContext';
 import ToastExample from '../components/ToastExample';
 
 export default {
-  title: 'App',
+  title: 'Examples',
   component: ToastExample,
   argTypes: {
     position: {

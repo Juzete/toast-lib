@@ -23,20 +23,23 @@ const ToastExample = ({ config }) => {
       <Button
         style={{ background: defaultErrorToastProperties.background }}
         onClick={() => addToast('error', 'error toast example', config)}
+        data-test-id="errorButton"
       >
         error toast example
       </Button>
       <Button
         style={{ background: defaultWarningToastProperties.background }}
         onClick={() => addToast('warning', 'warning toast example', config)}
+        data-test-id="warningButton"
       >
         warning toast example
       </Button>
       <Button
         style={{ background: defaultInfoToastProperties.background }}
         onClick={() => addToast('info', 'info toast example', config)}
+        data-test-id="infoButton"
       >
-        create info toast example
+        info toast example
       </Button>
     </Wrapper>
   );

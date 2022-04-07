@@ -25,10 +25,8 @@ export const ToastProvider = (props) => {
   };
 
   const removeToast = (id) => {
-    console.log(toastList);
     setToastList((prevList) => {
       return prevList.filter((item) => {
-        console.log(item.id, id);
         return item.id !== id;
       });
     });
