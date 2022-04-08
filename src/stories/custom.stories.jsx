@@ -24,11 +24,11 @@ export default {
       defaultValue: 'Title',
       control: { type: 'text' },
     },
-    color: {
+    backgroundColor: {
       defaultValue: 'black',
       control: { type: 'color' },
     },
-    textColor: {
+    color: {
       defaultValue: 'white',
       control: { type: 'color' },
     },
@@ -50,7 +50,7 @@ export const Edit = (args) => {
 };
 
 Edit.args = {
-  textColor: 'white',
+  color: 'white',
   fontSize: defaultSizes.fontSize,
   iconSize: defaultSizes.iconSize,
 };

@@ -17,7 +17,8 @@ export default class ToastGenerator {
   }
 
   constructor(type, text, properties) {
-    const [icon, color, textColor, title] = getToastPropertiesByType(type);
+    const [icon, backgroundColor, color, title] =
+      getToastPropertiesByType(type);
 
     this.type = type;
     this.text = text;
@@ -25,8 +26,8 @@ export default class ToastGenerator {
       width: this.width = 350,
       height: this.height = 70,
       title: this.title = title,
+      backgroundColor: this.backgroundColor = backgroundColor,
       color: this.color = color,
-      textColor: this.textColor = textColor,
       iconSize: this.iconSize = defaultSizes.iconSize,
       fontSize: this.fontSize = defaultSizes.fontSize,
       spacing: this.spacing = 0,
@@ -41,9 +42,7 @@ export default class ToastGenerator {
 
   remove(removeFn) {
     this.animationName = this.animationName + '-remove';
-    setTimeout(() => {
-      removeFn();
-    }, 0);
+    removeFn();
   }
 
   timer(removeFn) {
@@ -52,8 +51,6 @@ export default class ToastGenerator {
         removeFn();
       }, this.showDuration);
       return timerId;
-    } else {
-      return null;
     }
   }
 }
