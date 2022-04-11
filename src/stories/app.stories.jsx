@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { GlobalStyle } from '@/globalStyles';
+import { GlobalStyle } from '@/globalStyle';
 import { ToastProvider } from '@/contexts/ToastContext';
 
-import ToastExample from '../components/ToastExample';
+import ToastExample from '@/components/ToastExample';
 
 export default {
   title: 'Examples',
@@ -41,7 +41,7 @@ export default {
   },
 };
 
-export const toasts = (args) => {
+export const Toasts = (args) => {
   const { maxCount, position } = args;
   return (
     <ToastProvider position={position} maxCount={maxCount}>

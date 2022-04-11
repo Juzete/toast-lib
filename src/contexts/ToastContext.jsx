@@ -9,9 +9,7 @@ export const ToastContext = React.createContext();
 
 export const ToastProvider = (props) => {
   const { children, position = 'bottom-right', maxCount = 3 } = props;
-
   const [toastList, setToastList] = useState([]);
-
   usePortal(position);
 
   const addToast = (type, text, config) => {

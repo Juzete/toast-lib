@@ -3,7 +3,7 @@ import React from 'react';
 import Toast from '@/components/Toast';
 import { ToastProvider } from '@/contexts/ToastContext';
 import ToastGenerator from '@/utils/ToastGenerator';
-import { defaultSizes } from '../presets/toastsDefaultProperties';
+import { defaultSizes } from '@/presets/toastsDefaultProperties';
 
 export default {
   title: 'Custom',

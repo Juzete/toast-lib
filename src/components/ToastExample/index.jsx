@@ -7,7 +7,7 @@ import {
   defaultInfoToastProperties,
   defaultSuccessToastProperties,
   defaultWarningToastProperties,
-} from '../../presets/toastsDefaultProperties';
+} from '@/presets/toastsDefaultProperties';
 
 const ToastExample = ({ config }) => {
   const { addToast } = useContext(ToastContext);

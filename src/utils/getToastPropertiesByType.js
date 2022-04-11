@@ -3,7 +3,7 @@ import {
   defaultInfoToastProperties,
   defaultSuccessToastProperties,
   defaultWarningToastProperties,
-} from '../presets/toastsDefaultProperties';
+} from '@/presets/toastsDefaultProperties';
 
 export const getToastPropertiesByType = (type) => {
   switch (type) {
