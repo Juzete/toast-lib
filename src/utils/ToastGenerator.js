@@ -1,5 +1,5 @@
 import { uid } from 'uid';
-import { defaultSizes } from '../presets/toastsDefaultProperties';
+import { defaultSizes } from '@/presets/toastsDefaultProperties';
 import { getToastPropertiesByType } from './getToastPropertiesByType';
 
 export default class ToastGenerator {

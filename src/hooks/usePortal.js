@@ -1,16 +1,11 @@
 import { useState, useEffect } from 'react';
-import { defaultPositions } from '../presets/toastsDefaultProperties';
+import { defaultPortalStyles } from '@/presets/toastsDefaultProperties';
 
 const createPortalContainer = (position) => {
   if (!document.getElementById('portal')) {
     const portal = document.createElement('div');
     portal.setAttribute('id', 'portal');
-    portal.style = `
-    position: fixed;
-    width: fit-content;
-    height: auto;
-    z-index:1;
-    ${defaultPositions[position]};`;
+    portal.style = defaultPortalStyles(position);
     document.getElementById('root').after(portal);
     return true;
   }

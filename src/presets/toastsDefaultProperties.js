@@ -1,4 +1,4 @@
-import { iconAssets } from '../assets/iconAssets';
+import { iconAssets } from '@/assets/iconAssets';
 
 export const defaultInfoToastProperties = {
   icon: iconAssets.infoIcon,
@@ -42,3 +42,10 @@ export const defaultPositions = {
   'bottom-right': 'bottom: 10px; right: 10px',
   'bottom-middle': 'bottom: 10px; left: 40%',
 };
+
+export const defaultPortalStyles = (position) => `
+position: fixed;
+width: fit-content;
+height: auto;
+z-index: 1;
+${defaultPositions[position]};`;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { uid } from 'uid';
-import Toast from '../Toast';
+import Toast from '@/components/Toast';
 
 const ToastList = ({ toastList }) => {
   const [toasts, setToasts] = useState([]);
