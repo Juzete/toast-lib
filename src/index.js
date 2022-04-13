@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+export {
+  defaultErrorToastProperties,
+  defaultInfoToastProperties,
+  defaultPositions,
+  defaultSizes,
+  defaultSuccessToastProperties,
+  defaultWarningToastProperties,
+} from './presets/toastsDefaultProperties';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export { ToastContainer } from './components/ToastContainer';
+export { getToast } from './utils/getToast';

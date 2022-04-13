@@ -11,32 +11,37 @@ import {
 
 const ToastExample = ({ config }) => {
   const { addToast } = useContext(ToastContext);
+
+  const buttonHandler = (type, text, config) => () => {
+    addToast(type, text, config);
+  };
+
   return (
     <Wrapper>
       <Button
         style={{ background: defaultSuccessToastProperties.background }}
-        onClick={() => addToast('success', 'success toast example', config)}
+        onClick={buttonHandler('success', 'success toast example', config)}
         data-test-id="successButton"
       >
         success toast example
       </Button>
       <Button
         style={{ background: defaultErrorToastProperties.background }}
-        onClick={() => addToast('error', 'error toast example', config)}
+        onClick={buttonHandler('error', 'error toast example', config)}
         data-test-id="errorButton"
       >
         error toast example
       </Button>
       <Button
         style={{ background: defaultWarningToastProperties.background }}
-        onClick={() => addToast('warning', 'warning toast example', config)}
+        onClick={buttonHandler('warning', 'warning toast example', config)}
         data-test-id="warningButton"
       >
         warning toast example
       </Button>
       <Button
         style={{ background: defaultInfoToastProperties.background }}
-        onClick={() => addToast('info', 'info toast example', config)}
+        onClick={buttonHandler('info', 'info toast example', config)}
         data-test-id="infoButton"
       >
         info toast example
