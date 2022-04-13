@@ -1,3 +1,5 @@
+export { ToastGenerator } from './utils/ToastGenerator';
+
 export {
   defaultErrorToastProperties,
   defaultInfoToastProperties,
