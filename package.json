@@ -1,6 +1,6 @@
 {
-  "name": "toasts-lib",
-  "version": "0.0.1",
+  "name": "toasts-lib1",
+  "version": "1.0.0",
   "description": "toast library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

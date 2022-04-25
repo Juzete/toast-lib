@@ -9,9 +9,11 @@ export const ToastContainer = styled.div`
   align-items: center;
   width: ${(props) => props.config.width}px;
   height: ${(props) => props.config.height}px;
-  padding: 10px;
-  margin: 25px 10px 10px 10px;
-  border-radius: 7px;
+  padding: ${({ theme }) => theme.spaces[3]}px;
+  margin: ${({ theme }) => theme.spaces[6]}px
+    ${({ theme }) => theme.spaces[3]}px ${({ theme }) => theme.spaces[3]}px
+    ${({ theme }) => theme.spaces[3]}px;
+  border-radius: ${({ theme }) => theme.spaces[3]}px;
   box-shadow: 3px 3px 6px 2px rgba(11, 11, 11, 0.15);
   background-color: ${(props) => props.config.backgroundColor};
   animation-name: ${(props) =>
@@ -39,7 +41,6 @@ export const Title = styled.div`
   position: absolute;
   top: -20px;
   left: 5px;
-  font-size: ${(props) => props.textSize / 1.5}px;
   color: gray;
 `;
 
@@ -49,7 +50,7 @@ export const Cancel = styled.button`
   align-self: start;
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSize[1]}px;
   color: inherit;
   &:hover {
     cursor: pointer;

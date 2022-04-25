@@ -23,6 +23,11 @@ const ToastList = ({ toastList }) => {
       }, 700);
 
       return newToasts;
+    } else if (toastList.length === 3) {
+      setToasts((prevToast) => {
+        const newList = prevToast.slice(1);
+        return [...newList, <Toast properties={toastList[0]} key={uid()} />];
+      });
     }
   };
 
