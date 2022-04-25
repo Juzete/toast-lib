@@ -8,10 +8,10 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
   min-width: 250px;
   min-height: 75px;
-  margin: 20px;
+  margin: ${({ theme }) => theme.spaces[6]}px;
   border: none;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSize[1]}px;
   &:hover {
     cursor: pointer;
   }

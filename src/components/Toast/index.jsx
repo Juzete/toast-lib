@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ToastContext } from '@/contexts/ToastContext';
 
 import { ToastContainer, Icon, Text, Title, Cancel } from './components';
+import { ThemeProvider } from 'styled-components';
+import theme from '../../theme';
 
 const Toast = ({ properties }) => {
   const { removeToast, position } = useContext(ToastContext);
@@ -32,22 +34,24 @@ const Toast = ({ properties }) => {
   };
 
   return (
-    <ToastContainer
-      config={properties}
-      position={position}
-      draggable={true}
-      onDrag={onDragHandler}
-      onDragStart={onDragStartHandler}
-    >
-      <Title>{title}</Title>
-      <Icon icon={icon} iconSize={iconSize}></Icon>
-      <Text fontSize={fontSize} data-test-id={`toastText${properties.title}`}>
-        {text}
-      </Text>
-      <Cancel onClick={remove} data-test-id={`toastClose${properties.title}`}>
-        X
-      </Cancel>
-    </ToastContainer>
+    <ThemeProvider theme={theme}>
+      <ToastContainer
+        config={properties}
+        position={position}
+        draggable={true}
+        onDrag={onDragHandler}
+        onDragStart={onDragStartHandler}
+      >
+        <Title>{title}</Title>
+        <Icon icon={icon} iconSize={iconSize}></Icon>
+        <Text fontSize={fontSize} data-test-id={`toastText${properties.title}`}>
+          {text}
+        </Text>
+        <Cancel onClick={remove} data-test-id={`toastClose${properties.title}`}>
+          X
+        </Cancel>
+      </ToastContainer>
+    </ThemeProvider>
   );
 };
 
